@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { TrendingUp, TrendingDown, Minus } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { base44 } from '@/api/base44Client';
 
 const initialTickerData = [
   { pair: 'EUR/USD', price: 1.0847, change: 0.12, direction: 'up' },
