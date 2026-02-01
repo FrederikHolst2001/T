@@ -21,7 +21,8 @@ export default function LiveTicker() {
   useEffect(() => {
     const fetchLiveData = async () => {
       try {
-        const { data } = await base44.functions.invoke('fetchForexData', {});
+        const res = await fetch("/api/forecast");
+        const data = await res.json();
         
         if (data.pairs && data.pairs.length > 0) {
           setTickerData(data.pairs);
